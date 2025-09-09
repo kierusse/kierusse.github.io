@@ -1,0 +1,116 @@
+body {background-color:#3a1845;
+color: rgb(255 255 204);font-family: monospace;text-align: center;font-family: monospace; 
+scroll-behavior: smooth; y mandatory; overflow-y: scroll;}
+
+.autoShow {
+  animation: text-appear both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 100vh;
+}
+
+@keyframes text-appear {
+  from {
+    opacity: 0;
+    transform: translateY(120px);
+  }
+  50% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{background-color: #3a1845; font-size: 40px; text-shadow: 0 0 10px #00FFFF;}
+
+h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5vh;
+  font-size: 30px;
+  margin: 2%;
+  background-color: #3a1845;
+}
+
+.typewriter {
+position: relative;
+ display: inline-block;
+ overflow: hidden;
+ font-size: 30px;
+ line-height: 1;
+ white-space: nowrap;
+ animation: typing 4s steps(22,end) forwards;
+}
+
+.typewriter::after{
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: rgb(255 255 204);
+  background-color: #3a1845;
+  animation: blink 3s step-end infinite;
+  animation-delay: 0s;
+}
+
+@keyframes typing{
+  from {width: 0}
+  to 
+  {width: 24ch;}
+}
+
+@keyframes blink {
+  50%{
+    border-color: transparent;
+  }
+}
+
+.p1
+{background-color: #993344; font-size: 20px; line-height: 1.8; max-width: 65ch; margin: 1.5em auto; padding: 1.2em 1.5em; 
+text-align: left;text-indent: 2em;}
+.p2
+{background-color: #1f1964; font-size: 20px; line-height: 1.8; max-width: 65ch; margin: 1.5em auto; padding: 1.2em 1.5em;
+text-align: left;text-indent: 2em;}
+.indent {
+  display: block;
+  text-indent: 2em;
+}
+.p3
+{background-color: #9a3445; padding: 8px; display: inline-block; 
+border: 5px solid #3a1845; font-size: 28px;}
+ul {text-shadow: 0 0 10px #00FFFF; padding: 12px 36px; border: 2px solid darkmagenta;
+width: fit-content; margin: 1em auto; 
+list-style-position: inside; background-color: #3a1845; font-size: 22px;}
+li {margin:0.4em 0;
+  display: list-item; font-size:larger; font-family: monospace;
+}
+
+@keyframes flashborder {
+0% {border-color: darkmagenta;
+}
+50% {
+  border-color: blue;
+}
+100% {
+  border-color: darkmagenta
+}
+  
+}
+img {width: 350px; height: 350px; margin-bottom: .25in;}
+
+.socials {text-shadow: 0 0 10px #00FFFF; padding: 8px; border: 5px solid darkmagenta;
+width: fit-content; padding: 20px 50px; list-style-position: inside;
+animation: flashborder 2s infinite; 
+background-color: #777799; color: rgb(255 255 204); box-shadow: 8px 8px 5px rgb(128, 0, 128); font-size: 30px}
+
+.socials {display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 20px;}
